@@ -1,0 +1,39 @@
+﻿@model WebAppPelda.Models.Vasarlo;
+
+@{
+    ViewData["Title"] = "Új vásárló rögzítése";
+}
+
+<div class="container mt-4" style="max-width:600px">
+    <h2 class="mb-4">Vásárló adatai</h2>
+    @if(TempData["SuccessMessage"]!=null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+    <form asp-controller="Home" asp-action="UjVasarlo">
+        <div class="mb-3">
+            <label asp-for="Nev" class="form-label"></label>
+            <input asp-for="Nev" class="form-control" placholder"Minta János">
+        </div>
+        <div class="mb-3">
+            <label asp-for="Cim" class="form-label"></label>
+            <input asp-for="Cim" class="form-control" placholder"1051 Budapest, Fő tér 1.">
+        </div>
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label"></label>
+            <input asp-for="Email" class="form-control" placholder"mintajanos@example.com">
+        </div>
+        <div class="mb-3">
+            <label asp-for="Telefon" class="form-label"></label>
+            <input asp-for="Telefon" class="form-control" placholder"+36 1 123 4567">
+        </div>
+        <div class="mb-3">
+            <label asp-for="Pontszam" class="form-label"></label>
+            <input asp-for="Pontszam" type="number" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Mentés</button>
+    </form>
+</div>

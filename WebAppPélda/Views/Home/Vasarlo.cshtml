@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Vásárló adatai";                   // Beállítja az oldal címét, amit a böngésző fülén és az elrendezésben (Layout) használ a rendszer
+}
+
+<h1>@ViewData["Title"]</h1>                                 <!-- Megjeleníti az oldal főcímét (H1), dinamikusan kiolvasva a fent beállított értéket -->
+
+<p>Részletes információk a vásárlóról.</p>                  <!-- Egyszerű bekezdés, tájékoztató szöveg a felhasználónak -->
+
+<p>Id:@Model.Id</p>                                         <!-- Kiírja a controllerből átadott modell (vásárló) egyedi azonosítóját (ID) -->
+<p>Név:@Model.Nev</p>                                       <!-- Kiírja a modellben tárolt vásárló nevét -->
+<p>Cím:@Model.Cim</p>                                       <!-- Kiírja a modellben tárolt vásárló lakcímét -->
+<p>Telefonszám: @Model.Telefon</p>                          <!-- Kiírja a modellben tárolt vásárló telefonszámát -->
+<p>Email:@Model.Email</p>                                   <!-- Kiírja a modellben tárolt vásárló e-mail címét -->
+<p>Pontszám:@Model.Pontszam</p>                             <!-- Kiírja a modellben tárolt hűségpontokat vagy pontszámot -->
